@@ -1,0 +1,22 @@
+.nav-link{
+   color: black;
+   font-weight: 600;
+   text-decoration: none;
+   cursor: pointer;
+   font-size: 14px;
+   margin-top: 20px;
+}
+
+.nav-link:hover{
+  color: #3a9691;
+}
+.main-navbar {
+  padding-top: 20px;
+  width: 200px;
+  display: flex;
+  padding-left: 20px;
+  flex-direction: column;
+  box-shadow: 0 0 2em rgba(0,0,0,0.12);
+  align-self: stretch;
+}
+

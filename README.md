@@ -1,11 +1,10 @@
 # final-project
 
-This project is developed using React. This is a food ordering application which features the following pages.
+This project is developed using React. This is a food recepie application which features the following pages.
 
-1. Restaurant listing page(route: /)
-2. Restaurant menu page(route: /restaurant/:restaurantId)
-3. Order summary page(route: /order)
-4. Page not found
+1. Food Recipe listing page(route: /)
+2. Recipe detail page(route: /recipe/:recipeId)
+3. Saved recipe page(route: /recipes/saved)
 
 # Getting Started with Create React App
 

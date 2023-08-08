@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.recipe-app {
+  display: flex;
+}
+
+.main-container{
+  flex: 1;
+}
