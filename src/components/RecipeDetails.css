@@ -1,0 +1,121 @@
+.recipe-details-container .title {
+    color: #3a9691;
+}
+
+.recipe-details-container {
+    color: #4a4a4a;
+    margin: 32px auto 0 auto;
+    max-width: 978px;
+    width: 100%;
+}
+
+.recipe-info-container {
+    color: #4a4a4a;
+    margin-top: 32px;
+    max-width: 978px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.recipe-details {
+    margin: 0 0.5em;
+    justify-content: center;
+}
+
+.recipe-details-image {
+    flex-basis: 480px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: auto;
+    margin-left: 40px;
+    position: relative;
+    font-size: 0;
+}
+
+.recipe-image {
+    max-width: 480px;
+    max-height: 480px;
+    width: 35vw;
+    height: 35vw;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.nutrition-container {
+    width: 32em;
+    margin: 30px -40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nutrition-item {
+    color: #4a4a4a;
+    flex: 1;
+    text-align: center;
+}
+
+.nutrition-item.border {
+    border-left: 1px solid #bababa;
+    border-right: 1px solid#bababa;
+}
+
+.nutrition-item-value {
+    color: #4a4a4a;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.nutrition-item-label {
+    position: relative;
+    top: -4px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.714285714285714;
+}
+
+.favorite-recipe-btn {
+    background-color: rgb(58, 150, 145);
+    color: #fff;
+    border: none;
+    border-radius: 3em;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 11px 24px;
+}
+
+.remove-recipe-btn {
+    color: rgb(58, 150, 145);
+    background-color: #fff;
+    border: 1px solid rgb(58, 150, 145);
+    border-radius: 3em;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 11px 24px;
+}
+
+.recipe-details-container .text {
+    margin-left: 0.5em;
+    max-width: calc(100% - 24px);
+    padding: 0.5em 0 0.5em 0.5em;
+    font-size: 16px;
+}
+
+.recipe-details-container .text::marker {
+    content: "\2022";
+    color: #3a9691;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.ruler {
+    margin: 64px auto 56px;
+    opacity: 0.3;
+    max-width: 978px;
+    width: 100%;
+    color: #e3e3e3;
+}

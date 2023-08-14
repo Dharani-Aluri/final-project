@@ -1,0 +1,18 @@
+.logo-container {
+    text-align: center;
+    background: #3a9691;
+    border: 5px solid #3a9691;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-container .logo {
+    margin: 0 auto;
+    height: 350px;
+}
+
+.home-container {
+    margin: auto;
+    max-width: 950px;
+}

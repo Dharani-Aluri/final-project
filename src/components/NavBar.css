@@ -1,0 +1,28 @@
+.side-nav .logo {
+    width: 250px;
+}
+.nav-link {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.nav-link:hover {
+    color: #3a9691;
+}
+.nav-link.active {
+    color: #3a9691;
+}
+.side-nav {
+    width: 250px;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.12);
+    align-self: stretch;
+}
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}

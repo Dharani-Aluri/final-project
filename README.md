@@ -2,9 +2,11 @@
 
 This project is developed using React. This is a food recepie application which features the following pages.
 
-1. Food Recipe listing page(route: /)
-2. Recipe detail page(route: /recipe/:recipeId)
-3. Saved recipe page(route: /recipes/saved)
+1. Home page (route: /)
+2. Food Recipe listing page (route: /recipes)
+3. Recipe detail page(route: /recipes/:recipeId)
+4. Saved recipe page(route: /favorites)
+5. Page does not exists(route: \*)
 
 # Getting Started with Create React App
 

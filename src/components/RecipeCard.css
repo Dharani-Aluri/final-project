@@ -1,0 +1,35 @@
+.recipe-card img {
+    height: 200px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.recipe-card {
+    width: 250px;
+    padding: 10px;
+}
+
+.recipe-card:hover {
+    color: #3a9691;
+}
+
+.recipe-rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: revert;
+}
+
+.recipe-favorite-icon {
+    margin-top: 20px;
+}
+
+.recipe-name {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.recipe-name:hover {
+    color: #3a9691;
+}

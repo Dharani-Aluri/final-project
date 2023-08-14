@@ -1,51 +1,81 @@
-import "./App.css";
-import RecipeList from "./RecipeList";
-import RecipeDetails from "./RecipeDetails";
-import SavedRecipes from "./SavedRecipes";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./NavBar";
-import Recipes from "./Recipes";
+import { useState } from "react";
+import "./App.css";
+import Home from "./components/Home";
+import RecipeDetails from "./components/RecipeDetails";
+import FavoriteRecipes from "./components/FavoriteRecipes";
+import NavBar from "./components/NavBar";
+import Recipes from "./components/Recipes";
 
 function App() {
-    const url =
-        "https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes";
-    const options = {
-        method: "GET",
-        headers: {
-            "X-RapidAPI-Key":
-                "16d08acb08msh52df6f462e82d14p15ca31jsn15ee6d78faf1",
-            "X-RapidAPI-Host": "tasty.p.rapidapi.com",
-        },
+    const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+
+    const addToFavoriteRecipes = (recipe) => {
+        setFavoriteRecipes((prevFavoriteRecipes) => {
+            const newFavoriteRecipes = [...prevFavoriteRecipes, recipe];
+            return newFavoriteRecipes;
+        });
     };
 
-    // try {
-    //     fetch(url, options).then((res) => {
-    //         if (res.status !== 200) {
-    //             return;
-    //         }
-    //         res.json().then((jsonData) => {
-    //             console.log(jsonData);
-    //         });
-    //     });
-    // } catch (error) {
-    //     console.error(error);
-    // }
+    const deleteFromFavoriteRecipes = (recipeId) => {
+        const index = favoriteRecipes.findIndex(
+            (favoriteRecipe) => favoriteRecipe.id === recipeId
+        );
+        const newFavoriteRecipes = [...favoriteRecipes];
+        newFavoriteRecipes.splice(index, 1);
+        setFavoriteRecipes(newFavoriteRecipes);
+    };
+
     return (
         <div className="recipe-app">
-            <NavBar className="nav-bar" />
+            <NavBar className="nav-bar" favoriteRecipes={favoriteRecipes} />
             <div className="main-container">
                 <Routes>
-                    <Route path="/" element={<Recipes />} />
-                    <Route path="/recipes" element={<Recipes />} />
+                    <Route path="/" element={<Home />} />
+                    <Route
+                        path="/recipes"
+                        element={
+                            <Recipes
+                                favoriteRecipes={favoriteRecipes}
+                                addToFavoriteRecipes={addToFavoriteRecipes}
+                                deleteFromFavoriteRecipes={
+                                    deleteFromFavoriteRecipes
+                                }
+                            />
+                        }
+                    />
                     <Route
                         path="/recipes/:recipeId"
-                        element={<RecipeDetails />}
+                        element={
+                            <RecipeDetails
+                                addToFavoriteRecipes={addToFavoriteRecipes}
+                                deleteFromFavoriteRecipes={
+                                    deleteFromFavoriteRecipes
+                                }
+                                favoriteRecipes={favoriteRecipes}
+                            />
+                        }
                     />
 
-                    <Route path="/saved" element={<SavedRecipes />} />
+                    <Route
+                        path="/favorites"
+                        element={
+                            <FavoriteRecipes
+                                favoriteRecipes={favoriteRecipes}
+                                deleteFromFavoriteRecipes={
+                                    deleteFromFavoriteRecipes
+                                }
+                                addToFavoriteRecipes={addToFavoriteRecipes}
+                            />
+                        }
+                    />
                     <Route
                         path="*"
-                        element={<p>Uh oh, that page doesn't exist</p>}
+                        element={
+                            <p className="message">
+                                Uh oh, that page doesn't exist
+                            </p>
+                        }
                     />
                 </Routes>
             </div>
