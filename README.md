@@ -8,6 +8,10 @@ This project is developed using React. This is a food recepie application which 
 4. Saved recipe page(route: /favorites)
 5. Page does not exists(route: \*)
 
+This app is hosted at - https://dharani-final-project.surge.sh/
+
+Application screenshots are available in `App Screenshots/` folder
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
